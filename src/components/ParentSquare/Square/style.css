@@ -1,0 +1,5 @@
+.square{
+    height: var(--obj-size);
+    width: var(--obj-size);
+    background-color: #fbff00;
+}

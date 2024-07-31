@@ -1,0 +1,18 @@
+
+.lamp-activate{
+    background-color: #ffe70c;
+    box-shadow: rgba(253, 144, 27, 0.295) 0px 1px 4px, rgb(238, 178, 12) 0px 0px 0px 3px;
+}
+.lamp-deactivate{
+    background-color: #464646;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.lamp{
+    height: var(--obj-size);
+    width: var(--obj-size);
+    border-radius: 50%;
+}
+
+.lamp-btn{
+    cursor: pointer;
+}

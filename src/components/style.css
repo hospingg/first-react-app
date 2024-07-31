@@ -1,0 +1,14 @@
+html{
+    --obj-size: 100px
+}
+.task-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 2em;
+}
+h2{
+    margin: 0;
+}
