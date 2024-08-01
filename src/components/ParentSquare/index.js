@@ -17,7 +17,7 @@ class ParentSquare extends Component {
         return (
             <div className='task-container'>
                 <h2>Task 3:</h2>
-                <button onClick={this.changeRender}>
+                <button onClick={this.changeRender} className='btn'>
                     Create Square
                 </button>
                 {this.state.render? <Square /> : null}

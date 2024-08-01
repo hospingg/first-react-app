@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Dialog = (props) => {
     return (
         <div className='task-container'>

@@ -15,14 +15,14 @@ class Lamp extends Component {
             })
         }
     render() {
-        const isLampActivate = this.state.isOn ? 'lamp-activate' : 'lamp-deactivate'
+        const isLampActivate = this.state.isOn ? 'lamp-activate' : null
         return (
             <div className='task-container'>
                 <h2>
                     Task 1: 
                 </h2>
                 <div className={`lamp ${isLampActivate}`}></div>
-                <button onClick={this.turnLamp} className='lamp-btn'>
+                <button onClick={this.turnLamp} className='btn'>
                     turn on/off
                 </button>
             </div>
