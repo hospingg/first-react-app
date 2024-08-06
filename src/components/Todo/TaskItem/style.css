@@ -1,0 +1,27 @@
+
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff93;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.task-item p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trash-icon{
+    cursor: pointer;
+}
