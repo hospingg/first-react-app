@@ -6,18 +6,53 @@ class Todo extends Component {
     constructor(props){
         super(props)
         this.state = {
-            newData: null,
+            taskList: []
+        }
+        this.idCounter = 0
+    }
+
+    isEmpty = () => this.state.taskList.length === 0
+
+    isAllTasksDone = () => this.state.taskList.every(task => task.isActive === false)
+    
+    addTask = (newTask) => {
+        if(newTask!== null){
+            const taskItem = {name: newTask, id: this.idCounter++, isActive: true}
+            this.setState({
+                taskList: [...this.state.taskList, taskItem]
+            })
         }
     }
 
     parentCallBack = (childInfo) =>{
-        this.setState({
-            newData: childInfo});
+        this.addTask(childInfo);
     }
 
-    taskIsAdded = () =>{
+    deleteTask = (id) =>{
+        const newTaskList = this.state.taskList.filter(task => task.id !== id )
         this.setState({
-            newData: null})
+            taskList: newTaskList
+        });
+    }
+
+    changeTaskActivity = (check, id) => {
+        const changedTaskList = this.state.taskList.map(task => {
+            if(task.id === id){
+                task.isActive = !check
+            }
+            return task
+        }) ;
+        this.setState({
+            taskList: changedTaskList
+        })
+    }
+    listRender = () => {
+       return ( <List taskList = {this.state.taskList} 
+        isEmpty = {this.isEmpty()} 
+        deleteTask = {this.deleteTask} 
+        changeActivity={this.changeTaskActivity}
+        isAllDone = {this.isAllTasksDone()}>
+        </List> )
     }
 
     render() {
@@ -25,7 +60,7 @@ class Todo extends Component {
             <div className='to-do-container'>
                 <h2>To do list</h2>
                 <Form callback = {this.parentCallBack}></Form>
-                <List newTask = {this.state.newData} taskConfirm = {this.taskIsAdded}></List>
+                {this.listRender()}
             </div>
         );
     }
