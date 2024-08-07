@@ -5,17 +5,17 @@ class Form extends Component {
     constructor(props){
         super(props)
         this.state = {
-            inputValue: ''
+            inputValue: '',
         }
     }
-    // addTask = () =>{
-    //     console.log('hii');
-    // } 
-    getParentInfo = (e) => {
+    
+    getFormInfo = (e) => {
         e.preventDefault()
         if(this.state.inputValue !== ''){
             this.props.callback(this.state.inputValue)
-            this.state.inputValue = ''
+            this.setState({
+                inputValue: ''
+            })
         }
     }
 
@@ -25,13 +25,10 @@ class Form extends Component {
         })
     }
 
-    
-
     render() {
         return (
-            <form onSubmit={this.getParentInfo}>
-                 <input type='text' value={this.state.inputValue} onChange={this.changeHandler} ></input>
-                {/* <input type='submit'>додати</input> */}
+            <form onSubmit={this.getFormInfo}>
+                 <input type='text' name='todo' value={this.state.inputValue} onChange={this.changeHandler} ></input>
                 <button type='submit'>додати</button>
             </form>
         );

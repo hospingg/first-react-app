@@ -1,6 +1,6 @@
 
 html{
-    --obj-size: 100px
+    --obj-size: 100px;
 }
 .task-container{
     display: flex;

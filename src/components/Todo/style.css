@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    --checkbox-size: 20px
+}
+
 .to-do-container{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4af6a;

@@ -1,4 +1,5 @@
 
+
 li{
     list-style: none;
     display: flex;
@@ -20,8 +21,19 @@ li{
 .task-item p{
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: auto;
 }
 
 .trash-icon{
     cursor: pointer;
+}
+.task-is-done {
+    color: #838383;
+    text-decoration: line-through
+}
+
+input[type=checkbox]{
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    
 }
