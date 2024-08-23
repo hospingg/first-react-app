@@ -28,7 +28,9 @@ class Form extends Component {
     render() {
         return (
             <form onSubmit={this.getFormInfo}>
-                 <input type='text' name='todo' value={this.state.inputValue} onChange={this.changeHandler} ></input>
+                 <input type='text' name='todo' 
+                    value={this.state.inputValue} 
+                    onChange={this.changeHandler} ></input>
                 <button type='submit'>додати</button>
             </form>
         );

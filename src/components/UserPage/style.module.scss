@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+$grid-breakpoints-xs: 0;
+$grid-breakpoints-sm: 576px;
+$grid-breakpoints-md: 768px;
+$user-image-size: 150px;
+$flag-size: 28px;
+
+html{
+    font-size: 16px;
+    @media screen and (max-width: $grid-breakpoints-md) {
+        font-size: 0.75em;
+    }
+}
+
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 5px;
+}
+.card{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: auto;
+    max-width: 600px;
+
+    @media screen and (max-width: $grid-breakpoints-md) {
+        flex-basis: 200px;
+        flex-shrink: 0;
+    }
+}
+
+.main-info{
+    width: 100%;
+    box-shadow:rgb(17 12 46 / 6%) -1px 10px 100px 0px;
+
+    h2{
+        color: initial;
+        font-size: 1.5rem;
+        margin-bottom: 0.25em;
+    }
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2em 2.8em 1em;
+    color: #aaaaaa;
+
+    &:last-child{
+        margin-top: auto;
+    }
+}
+.user-img{
+    width: $user-image-size;
+    height: $user-image-size;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+
+    @media screen and (max-width: $grid-breakpoints-md) {
+        width: calc($user-image-size/1.5);
+        height: calc($user-image-size/1.5);
+    }
+}
+.user-cards-storage{
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+.fa-solid{
+    color: #aaaaaa;
+    background-color: #FFFF;
+    padding: 2px;
+    border-radius: 50%;
+    margin-top: -15px;
+    width: $flag-size;
+    height: $flag-size;
+    object-fit: cover;
+}
+.email{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+.name-age{
+    color: initial;
+    font-size: 1.25rem;
+    margin: 0;
+}
+.location{
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 10px;
+    color: #737373;
+}
+.online-icon{
+    color: #7ce117;
+    margin-right: 0.35em;
+}
+.activity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+.nat-flag{
+    height: 20px;
+}
+
+
